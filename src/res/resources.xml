@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/com/codingsimply/gnome/Twitter/">
+        <file compressed="true" preprocess="xml-stripblanks">gtk/main.glade</file>
+        <file compressed="true">gtk/style.css</file>
+    </gresource>
+</gresources>
