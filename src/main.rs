@@ -2,7 +2,7 @@ extern crate gtk;
 
 use gtk::prelude::*;
 
-use gtk::{Label, Window, WindowType, Inhibit};
+use gtk::{Window, Inhibit, Builder};
 
 fn main() {
     if gtk::init().is_err() {
@@ -10,13 +10,10 @@ fn main() {
         return;
     }
 
-    let window = Window::new(WindowType::Toplevel);
-    window.set_title("Twitter");
-    window.set_default_size(350, 70);
-    let label = Label::new("Gnome Twitter");
-    window.add(&label);
+    let glade_src = include_str!("res/gtk/main.glade");
+    let builder = Builder::new_from_string(glade_src);
+    let window: Window = builder.get_object("window").unwrap();
     window.show_all();
-
     window.connect_delete_event(|_, _| {
         gtk::main_quit();
         Inhibit(false)
