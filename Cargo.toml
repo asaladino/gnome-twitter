@@ -7,6 +7,13 @@ build = "build.rs"
 
 [dependencies]
 
+gio = "0.6.0"
+hyper = "0.12.30"
+hyper-tls = "0.3.2"
+serde = "1.0.92"
+serde_derive = "1.0.92"
+serde_json = "1.0.39"
+
 [dependencies.gtk]
 version = "0.6.0"
 features = ["v3_16"]

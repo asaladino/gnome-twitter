@@ -2,15 +2,17 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkWindow" id="window">
+  <object class="GtkApplicationWindow" id="window">
+    <property name="name">Gnome Twitter</property>
     <property name="can_focus">False</property>
-    <property name="tooltip_text" translatable="yes">Gnome Twitter</property>
+    <property name="tooltip_text">Gnome Twitter</property>
     <property name="title" translatable="yes">Gnome Twitter</property>
     <property name="default_width">400</property>
     <property name="default_height">300</property>
-    <property name="icon">src/res/icons/logo.svg</property>
+    <property name="icon">res/icons/app-icon.png</property>
     <property name="gravity">center</property>
-    <child>
+    <property name="startup_id">Gnome Twitter</property>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child>
